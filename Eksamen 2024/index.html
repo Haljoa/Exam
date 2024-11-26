@@ -14,7 +14,8 @@
             <Header id="Global-Header">
                 <h1>SALAMI</h1>
                 <nav>
-                    <ul>
+                    <i class="fa-solid fa-burger" onclick="ToggleMenu()"></i>
+                    <ul id="menu">
                         <li>
                             <form>
                                 <input type="search" placeholder="Search" id="search">
@@ -34,9 +35,10 @@
             </Header>
             <main id="Product-Container">
                 <section class="Banner">
-                    <h2>Our most popular products</h2>
+                    <h2>Banner</h2>
                 </section>
                 <section id="Popular_products">
+                    <h2>Our most popular products</h2>
                     <article class="product-card">
                         <a href="produkt.html"><img src="images/gilde_salami.jpg" alt="gilde salami" width="160" height="300"></a>
                         <a href="produkt.html"><h3>Salami</h3></a>
@@ -68,21 +70,17 @@
                         <p>1.5$</p>
                     </article>
                 </section>
-                <section class="Banner">
-                    <h2>Our most popular categories</h2>
-                </section>
                 <section id="Popular_Categories">
+                    <h2>Our most popular categories</h2>
                     <article class="product-card">
                         <a href="produkt.html"><img src="images/gilde_salami.jpg" alt="gilde salami" width="160" height="300"></a>
                         <a href="produkt.html"><h3>Salami</h3></a>
                         <p>1.5$</p>
                     </article>
                 </section>
-                <section class="Banner">
-                    <h2>Reviews</h2>
-                </section>
                 <section>
                     <section id="Reviews">
+                        <h2>Reviews</h2>
                         <article class="product-card">
                             <a href="produkt.html"><img src="images/gilde_salami.jpg" alt="gilde salami" width="160" height="300"></a>
                             <a href="produkt.html"><h3>Salami</h3></a>
@@ -115,5 +113,16 @@
                 </section>
             </footer>
         </div>
+        <!--Copied from Zalando Lite website-->
+        <script>
+            let ToggleMenu = ()=>{
+                let x = document.getElementById("menu")
+                if(x.style.display === "flex"){
+                    x.style.display = "none"
+                }else{
+                    x.style.display = "flex"
+                }
+            }
+        </script>
     </body>
 </html>

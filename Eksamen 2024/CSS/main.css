@@ -3,19 +3,16 @@ html {
   font-size: calc(0.5em + 0.5vw);
 }
 
-nav {
+nav ul {
   height: 2rem;
   border: 2px solid black;
   border-radius: 4px;
-}
-nav ul {
-  display: flex;
-  list-style: none;
   padding: 0;
   margin: 0;
   gap: 1rem;
-  height: 2rem;
   background-color: salmon;
+  display: flex;
+  list-style: none;
   justify-content: space-evenly;
 }
 nav ul * {
@@ -30,6 +27,23 @@ nav ul input {
   max-width: 5rem;
 }
 
+.fa-burger {
+  border: 2px solid black;
+  background-color: salmon;
+  height: 1rem;
+  width: 1rem;
+}
+
+@media only screen and (min-width: 701px) {
+  .fa-burger {
+    display: none;
+  }
+}
+@media only screen and (max-width: 700px) {
+  #menu {
+    display: none;
+  }
+}
 footer {
   border-radius: 4px;
   border: 2px solid black;
@@ -81,6 +95,9 @@ h1 {
   justify-content: space-evenly;
   background-color: #8a1611;
 }
+#Popular_products h2 {
+  width: 100%;
+}
 
 .product-card {
   display: flex;
@@ -97,6 +114,27 @@ h1 {
   margin: 5px;
 }
 .product-card * {
+  background-color: salmon;
+  align-items: center;
+  justify-self: center;
+  color: black;
+}
+
+.product {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  border: 2px solid black;
+  min-width: 300px;
+  background-color: salmon;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 5px;
+}
+.product * {
   background-color: salmon;
   align-items: center;
   justify-self: center;
