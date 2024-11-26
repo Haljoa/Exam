@@ -1,0 +1,44 @@
+@use 'definitions.scss' as f;
+@use 'mixins.scss' as *;
+@use 'details.scss';
+@use 'structure.scss';
+
+*{
+    font-family: f.$mainFont;
+    background-color: f.$background;
+    text-decoration: none;
+}
+
+.Global-container{
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+}    
+
+h1{
+    justify-self: center;
+    width: 200px;
+}
+
+#Popular_products{
+    @include flexbox(row, wrap, space-evenly);
+    background-color: f.$background;
+}
+
+.product-card{
+    @include flexbox(column, wrap, center);
+    align-items: center;
+    flex-grow: 1;
+    border: 2px solid black;
+    min-width: 300px;
+    background-color: f.$background2;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 5px;
+    *{
+        background-color: f.$background2;
+        align-items: center;
+        justify-self: center;
+        color: black;
+    }
+}
