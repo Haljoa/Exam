@@ -12,6 +12,8 @@
 body{
     display: flex;
     justify-content: center;
+    margin: 1rem;
+    gap: 1rem;
 }
 
 #Global-Container{
@@ -21,7 +23,9 @@ body{
 }    
 
 .Banner{
-    @include flexbox(row, wrap, center);
+    @include flexbox(column, wrap, center);
+    align-items: center;
+
 }
 
 #Popular_products{
