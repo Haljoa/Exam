@@ -9,23 +9,24 @@
     text-decoration: none;
 }
 
-.Global-container{
+body{
     display: flex;
-    flex-direction: row;
-    max-width: 1200px;
+    justify-content: center;
+}
+
+#Global-Container{
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
 }    
 
-h1{
-    justify-self: center;
-    width: 200px;
+.Banner{
+    @include flexbox(row, wrap, center);
 }
 
 #Popular_products{
     @include flexbox(row, wrap, space-evenly);
     background-color: f.$background;
-    h2{
-        width: 100%;
-    }
 }
 
 .product-card{
