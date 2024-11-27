@@ -1,7 +1,6 @@
 @use 'definitions.scss' as f;
 @use 'mixins.scss' as *;
 @use 'details.scss';
-@use 'structure.scss';
 
 #Example_Product{
     @include flexbox(row, wrap, space-around, center);
@@ -12,8 +11,9 @@
     }
 
     #Details{
-        @include colours(f.$background3, 50%);
+        @include colours(f.$background3);
         @include flexbox(column, wrap, center, center);
+        width: 50%;
 
         *{
             background-color: f.$background3;
@@ -27,5 +27,26 @@
     .example_product{
         @include flexbox(column, wrap, flex-start, normal);
         width: 50%;
+    }
+}
+
+#Related_Products{
+    @include flexbox(row, wrap, space-evenly, normal);
+    background-color: f.$background;
+
+    .product-card{
+        @include flexbox(column, wrap, center, center);
+        @include colours(f.$background2);
+
+        flex-grow: 1;
+        padding: 1rem;
+        margin: 5px;
+        
+        *{
+            background-color: f.$background2;
+            align-items: center;
+            justify-self: center;
+            color: black;
+        }
     }
 }

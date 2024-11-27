@@ -30,38 +30,21 @@ body{
 #Popular_products{
     @include flexbox(row, wrap, space-evenly, normal);
     background-color: f.$background;
-}
 
-.product-card{
-    @include flexbox(column, wrap, center, center);
-    @include colours(f.$background2);
+    .product-card{
+        @include flexbox(column, wrap, center, center);
+        @include colours(f.$background2);
 
-    flex-grow: 1;
-    min-width: 300px;
-    padding: 1rem;
-    margin: 5px;
-    
-    *{
-        background-color: f.$background2;
-        align-items: center;
-        justify-self: center;
-        color: black;
-    }
-}
-
-.product{
-    @include flexbox(row, wrap, center, center);
-    flex-grow: 1;
-    border: 2px solid black;
-    min-width: 300px;
-    background-color: f.$background2;
-    border-radius: 4px;
-    padding: 1rem;
-    margin: 5px;
-    *{
-        background-color: f.$background2;
-        align-items: center;
-        justify-self: center;
-        color: black;
+        flex-grow: 1;
+        min-width: 300px;
+        padding: 1rem;
+        margin: 5px;
+        
+        *{
+            background-color: f.$background2;
+            align-items: center;
+            justify-self: center;
+            color: black;
+        }
     }
 }
