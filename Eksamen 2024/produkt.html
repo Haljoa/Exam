@@ -7,13 +7,13 @@
         <link href="coolfont/css/brands.css" rel="stylesheet">
         <link href="coolfont/css/solid.css" rel="stylesheet">
         <link rel="stylesheet" href="CSS/main.css">
-        <title>The greatest salami website you will ever see</title>
+        <title>Totally not a gilde knockoff</title>
     </head>
     <body>
         <div id="Global-Container">
-            <Header>
-                <h1>Product page</h1>
+            <Header id="Global-Header">
                 <nav>
+                    <i class="fa-solid fa-bars" onclick="ToggleMenu()"></i>
                     <ul id="menu">
                         <li>
                             <form>
@@ -22,8 +22,8 @@
                             </form>
                         </li>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="produkt.html">Products</a></li>
-                        <li><a href="index.html"><h1>SALAMI</h1></a></li>
+                        <li><a href="index.html#Popular_products">Products</a></li>
+                        <li><a href="index.html"><h1>Golde</h1></a></li>
                         <li><a href="index.html#Popular_Categories">Categories</a></li>
                         <li><a href="index.html#Footer">Contact us</a></li>
                         <li>
@@ -32,19 +32,37 @@
                     </ul>
                 </nav>
             </Header>
-            <main>
-                <section class="Banner">
+            <main id="Example_Product">
+                <nav id="Breadcrumbs">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li>></li>
+                        <li><a href="#">Meat</a></li>
+                        <li>></li>
+                        <li><a href="#">Salami</a></li>
+                    </ul>
+                </nav>
+                <article class="Example_Product">
+                    <img src="images/gilde_salami.jpg" alt="gilde salami" width="80" height="150">
+                    <img src="images/gilde_salami.jpg" alt="gilde salami" width="80" height="150">
+                    <img src="images/gilde_salami.jpg" alt="gilde salami" width="160" height="300" id="Main_Example">
+                </article>
+                <article id="Details">
                     <h2>Salami</h2>
-                </section>
-                <section id="Example_Product">
-                    <article class="product">
-                        <img src="images/gilde_salami.jpg" alt="gilde salami" width="160" height="300">
-                        <a href="produkt.html"><h3>Salami</h3></a>
-                        <p>1.5$</p>
-                    </article>
-                </section>
+                    <h3>Gilde</h3>
+                    <p>1.5$</p>
+                    <form>
+                        <select name="Size">
+                            <option value="Snack-sized">Snack-sized</option>
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                            <option value="Pizza-sized">Pizza-sized</option>
+                        </select>
+                    </form>
+                </article>
             </main>
-            <footer id="Footer">
+           <footer id="Footer">
                 <section id="Footer_Logo">
                     <h2>SALAMI</h2>
                     <h4>The greatest salami for the lowest prices</h4>

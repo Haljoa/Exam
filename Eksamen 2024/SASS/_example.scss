@@ -1,0 +1,31 @@
+@use 'definitions.scss' as f;
+@use 'mixins.scss' as *;
+@use 'details.scss';
+@use 'structure.scss';
+
+#Example_Product{
+    @include flexbox(row, wrap, space-around, center);
+    @include colours(f.$background2);
+
+    *{
+        background-color: f.$background2;
+    }
+
+    #Details{
+        @include colours(f.$background3, 50%);
+        @include flexbox(column, wrap, center, center);
+
+        *{
+            background-color: f.$background3;
+        }
+
+        select, option{
+            background-color: f.$background;
+        }
+    }
+
+    .example_product{
+        @include flexbox(column, wrap, flex-start, normal);
+        width: 50%;
+    }
+}

@@ -1,7 +1,16 @@
 
-@mixin flexbox($direction, $wrap, $content){
+@mixin colours($colour, $width){
+    border-radius: 4px;
+    border: 2px solid black;
+    background-color: $colour;
+    width: $width;
+}
+
+
+@mixin flexbox($direction, $wrap, $content, $align){
     display: flex;
     flex-direction: $direction;
     flex-wrap: $wrap;
     justify-content: $content;
+    align-items: $align;
 }

@@ -2,6 +2,7 @@
 @use 'mixins.scss' as *;
 @use 'details.scss';
 @use 'structure.scss';
+@use 'example.scss';
 
 *{
     font-family: f.$mainFont;
@@ -23,24 +24,20 @@ body{
 }    
 
 .Banner{
-    @include flexbox(column, wrap, center);
-    align-items: center;
-
+    @include flexbox(column, wrap, center, center);
 }
 
 #Popular_products{
-    @include flexbox(row, wrap, space-evenly);
+    @include flexbox(row, wrap, space-evenly, normal);
     background-color: f.$background;
 }
 
 .product-card{
-    @include flexbox(column, wrap, center);
-    align-items: center;
+    @include flexbox(column, wrap, center, center);
+    @include colours(f.$background2);
+
     flex-grow: 1;
-    border: 2px solid black;
     min-width: 300px;
-    background-color: f.$background2;
-    border-radius: 4px;
     padding: 1rem;
     margin: 5px;
     
@@ -53,8 +50,7 @@ body{
 }
 
 .product{
-    @include flexbox(row, wrap, center);
-    align-items: center;
+    @include flexbox(row, wrap, center, center);
     flex-grow: 1;
     border: 2px solid black;
     min-width: 300px;
