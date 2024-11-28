@@ -44,7 +44,7 @@
 
     .Review{
         @include colours(f.$background3, f.$text_colour2);
-
+        margin: 5px;
     }   
     h3, p, i{
         background-color: f.$background3;

@@ -9,6 +9,7 @@
 
     flex-grow: 1;
     margin: 1rem;
+    padding: 1rem;
 
     .Title{
         @include flexbox(row, wrap, center, center);
@@ -29,9 +30,14 @@
             margin: 0px;
         }
 
-        input, button, select, option, button label{
+        #Contact{
+            @include flexbox(column, wrap, space-around, center);
+        }
+
+        input, button, select, option, button label, input{
             background-color: f.$background;
             color: f.$text_colour1;
+            margin: 5px;
         }
 
         form, button{

@@ -38,7 +38,7 @@ html {
   background-color: salmon;
   color: black;
 }
-#Example_Product #Details select, #Example_Product #Details option, #Example_Product #Details button {
+#Example_Product #Details select, #Example_Product #Details option, #Example_Product #Details input {
   background-color: white;
 }
 #Example_Product .Example_Product {
@@ -228,6 +228,7 @@ footer ul a {
   border: 2px solid black;
   background-color: salmon;
   color: white;
+  margin: 5px;
 }
 .Review-Card h3, .Review-Card p, .Review-Card i {
   background-color: salmon;
@@ -246,6 +247,7 @@ footer ul a {
   color: white;
   flex-grow: 1;
   margin: 1rem;
+  padding: 1rem;
 }
 .Overview .Title {
   display: flex;
@@ -271,9 +273,17 @@ footer ul a {
 .Overview .Details * {
   margin: 0px;
 }
-.Overview .Details input, .Overview .Details button, .Overview .Details select, .Overview .Details option, .Overview .Details button label {
+.Overview .Details #Contact {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.Overview .Details input, .Overview .Details button, .Overview .Details select, .Overview .Details option, .Overview .Details button label, .Overview .Details input {
   background-color: white;
   color: black;
+  margin: 5px;
 }
 .Overview .Details form, .Overview .Details button {
   margin-top: 10px;
