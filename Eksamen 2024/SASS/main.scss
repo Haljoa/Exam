@@ -3,6 +3,7 @@
 @use 'details.scss';
 @use 'structure.scss';
 @use 'example.scss';
+@use 'checkout.scss';
 
 *{
     font-family: f.$mainFont;
@@ -33,10 +34,11 @@ body{
 
     .product-card{
         @include flexbox(column, wrap, center, center);
-        @include colours(f.$background2);
+        @include colours(f.$background2, f.$text_colour2);
 
         flex-grow: 1;
-        min-width: 300px;
+        min-width: fit-content;
+        max-width: 350px;
         padding: 1rem;
         margin: 5px;
         
@@ -44,7 +46,62 @@ body{
             background-color: f.$background2;
             align-items: center;
             justify-self: center;
-            color: black;
+            color: f.$text_colour2;
         }
     }
 }
+
+#Popular_Categories{
+    @include flexbox(row, wrap, space-evenly, normal);
+    background-color: f.$background;
+
+    .product-card{
+        @include flexbox(column, wrap, center, center);
+        @include colours(f.$background2, f.$text_colour2);
+
+        flex-grow: 1;
+        min-width: fit-content;
+        padding: 1rem;
+        margin: 5px;
+        
+        *{
+            background-color: f.$background2;
+            align-items: center;
+            justify-self: center;
+            color: f.$text_colour2;
+        }
+    }
+}
+
+#Reviews{
+    @include flexbox(row, wrap, space-evenly, normal);
+    background-color: f.$background;
+
+    .Review-Card{
+        @include flexbox(row, wrap, center, center);
+        @include colours(f.$background2, f.$text_colour2);
+
+        flex-grow: 1;
+        min-width: fit-content;
+        padding: 1rem;
+        margin: 5px;
+        
+        *{
+            background-color: f.$background2;
+            align-items: center;
+            justify-self: center;
+            color: f.$text_colour2;
+        }
+
+        .Review{
+            @include colours(f.$background3, f.$text_colour2);
+
+            
+        h3, p, i{
+            background-color: f.$background3;
+            color: f.$text_colour1;
+        }
+        }
+    }
+}
+

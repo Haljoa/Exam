@@ -1,0 +1,27 @@
+@use 'definitions.scss' as f;
+@use 'mixins.scss' as *;
+@use 'details.scss';
+
+
+#Checkout{
+    @include flexbox(row, wrap, center, center);
+    background-color: f.$background;
+
+    #Shopping_Cart{
+        @include flexbox(row, wrap, center, center);
+        @include colours(f.$background2, f.$text_colour2);
+
+        flex-grow: 1;
+        min-width: fit-content;
+        padding: 1rem;
+        margin: 5px;
+        
+        *{
+            background-color: f.$background2;
+            align-items: center;
+            justify-self: center;
+            color: f.$text_colour2;
+        }
+    }
+}
+
