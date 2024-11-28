@@ -34,6 +34,10 @@ nav{
     }
 }
 
+.Banner{
+    @include flexbox(column, wrap, center, center);
+}
+
 #Breadcrumbs{
     width: 100%;
     display: flex;

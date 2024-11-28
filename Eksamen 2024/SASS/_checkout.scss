@@ -4,10 +4,15 @@
 
 
 #Checkout{
-    @include flexbox(row, wrap, center, center);
-    background-color: f.$background;
+    @include flexbox(column, wrap, space-evenly, center);
+    @include colours(f.$background2, f.$text_colour1);
 
-    #Shopping_Cart{
+    flex-grow: 1;
+    min-width: fit-content;
+    padding: 1rem;
+    margin: 5px;
+    
+    .Overview{
         @include flexbox(row, wrap, center, center);
         @include colours(f.$background2, f.$text_colour2);
 
@@ -22,6 +27,18 @@
             justify-self: center;
             color: f.$text_colour2;
         }
+
+        .Details{
+            @include colours(f.$background3, f.$text_colour1);
+            *{
+                background-color: f.$background3;
+                color: f.$text_colour1;
+            }
+            input, button, select, option{
+                background-color: f.$background;
+            }
+        }
     }
 }
+
 
