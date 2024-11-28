@@ -51,3 +51,38 @@
         color: f.$text_colour1;
     }
 }
+
+.Category-Card{
+    @include flexbox(column, wrap, center, center);
+    @include colours(f.$background2, f.$text_colour2);
+
+    flex-grow: 1;
+    min-width: fit-content;
+    padding: 1rem;
+    margin: 5px;
+
+    position: relative;
+    text-align: center;
+    /*Couldnt figure out how to place text on top of an image so i copied this from W3Schools*/
+    .Overlay_Text{
+        font-size: large;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    img{
+        max-width: 100%;
+        height: auto;
+        width: auto
+    }
+    /*Couldnt figure out how to dynamically rezise an image in HTML so i copied this from stackoverflow*/
+
+    *{
+        align-items: center;
+        justify-self: center;
+        color: f.$text_colour1;
+    }
+
+}
