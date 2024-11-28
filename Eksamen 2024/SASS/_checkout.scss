@@ -3,42 +3,39 @@
 @use 'details.scss';
 
 
-#Checkout{
-    @include flexbox(column, wrap, space-evenly, center);
-    @include colours(f.$background2, f.$text_colour1);
+.Overview{
+    @include flexbox(row, wrap, space-evenly, normal);
+    @include colours(f.$background2, f.$text_colour2);
 
     flex-grow: 1;
-    min-width: fit-content;
-    padding: 1rem;
-    margin: 5px;
-    
-    .Overview{
-        @include flexbox(row, wrap, center, center);
-        @include colours(f.$background2, f.$text_colour2);
+    margin: 1rem;
 
-        flex-grow: 1;
-        min-width: fit-content;
-        padding: 1rem;
-        margin: 5px;
-        
+    .Title{
+        @include flexbox(row, wrap, center, center);
+        width: 100%;
+    }
+
+    *{
+        background-color: f.$background2;
+        align-items: center;
+        justify-self: center;
+        color: f.$text_colour2;
+    }
+
+    .Details{
+        @include flexbox(column, wrap, space-around, center);
+
         *{
-            background-color: f.$background2;
-            align-items: center;
-            justify-self: center;
-            color: f.$text_colour2;
+            margin: 0px;
         }
 
-        .Details{
-            @include colours(f.$background3, f.$text_colour1);
-            *{
-                background-color: f.$background3;
-                color: f.$text_colour1;
-            }
-            input, button, select, option{
-                background-color: f.$background;
-            }
+        input, button, select, option, button label{
+            background-color: f.$background;
+            color: f.$text_colour1;
+        }
+
+        form, button{
+            margin-top: 10px;
         }
     }
 }
-
-

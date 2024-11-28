@@ -52,35 +52,6 @@ html {
   margin: 1rem;
 }
 
-#Related_Products {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: normal;
-  background-color: white;
-}
-#Related_Products .product-card {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-  border: 2px solid black;
-  background-color: #8a1611;
-  color: white;
-  flex-grow: 1;
-  padding: 1rem;
-  margin: 5px;
-}
-#Related_Products .product-card * {
-  background-color: #8a1611;
-  color: white;
-  align-items: center;
-  justify-self: center;
-}
-
 nav {
   font-size: 4em;
 }
@@ -197,7 +168,7 @@ footer ul a {
   color: white;
 }
 
-#Popular_products {
+.Product-Container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -205,7 +176,8 @@ footer ul a {
   align-items: normal;
   background-color: white;
 }
-#Popular_products .product-card {
+
+.product-card {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -222,135 +194,89 @@ footer ul a {
   padding: 1rem;
   margin: 5px;
 }
-#Popular_products .product-card * {
+.product-card * {
   background-color: #8a1611;
   align-items: center;
   justify-self: center;
   color: white;
 }
 
-#Popular_Categories {
+.Review-Card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 2px solid black;
+  background-color: #8a1611;
+  color: white;
+  flex-grow: 1;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  padding: 1rem;
+  margin: 5px;
+}
+.Review-Card * {
+  background-color: #8a1611;
+  align-items: center;
+  justify-self: center;
+  color: white;
+}
+.Review-Card .Review {
+  border-radius: 4px;
+  border: 2px solid black;
+  background-color: salmon;
+  color: white;
+}
+.Review-Card h3, .Review-Card p, .Review-Card i {
+  background-color: salmon;
+  color: black;
+}
+
+.Overview {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: normal;
-  background-color: white;
+  border-radius: 4px;
+  border: 2px solid black;
+  background-color: #8a1611;
+  color: white;
+  flex-grow: 1;
+  margin: 1rem;
 }
-#Popular_Categories .product-card {
+.Overview .Title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.Overview * {
+  background-color: #8a1611;
+  align-items: center;
+  justify-self: center;
+  color: white;
+}
+.Overview .Details {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  border-radius: 4px;
-  border: 2px solid black;
-  background-color: #8a1611;
-  color: white;
-  flex-grow: 1;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-  padding: 1rem;
-  margin: 5px;
 }
-#Popular_Categories .product-card * {
-  background-color: #8a1611;
-  align-items: center;
-  justify-self: center;
-  color: white;
+.Overview .Details * {
+  margin: 0px;
 }
-
-#Reviews {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: normal;
+.Overview .Details input, .Overview .Details button, .Overview .Details select, .Overview .Details option, .Overview .Details button label {
   background-color: white;
-}
-#Reviews .Review-Card {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-  border: 2px solid black;
-  background-color: #8a1611;
-  color: white;
-  flex-grow: 1;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-  padding: 1rem;
-  margin: 5px;
-}
-#Reviews .Review-Card * {
-  background-color: #8a1611;
-  align-items: center;
-  justify-self: center;
-  color: white;
-}
-#Reviews .Review-Card .Review {
-  border-radius: 4px;
-  border: 2px solid black;
-  background-color: salmon;
-  color: white;
-}
-#Reviews .Review-Card h3, #Reviews .Review-Card p, #Reviews .Review-Card i {
-  background-color: salmon;
   color: black;
 }
-
-#Checkout {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  border-radius: 4px;
-  border: 2px solid black;
-  background-color: #8a1611;
-  color: black;
-  flex-grow: 1;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-  padding: 1rem;
-  margin: 5px;
-}
-#Checkout .Overview {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-  border: 2px solid black;
-  background-color: #8a1611;
-  color: white;
-  flex-grow: 1;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-  padding: 1rem;
-  margin: 5px;
-}
-#Checkout .Overview * {
-  background-color: #8a1611;
-  align-items: center;
-  justify-self: center;
-  color: white;
-}
-#Checkout .Overview .Details {
-  border-radius: 4px;
-  border: 2px solid black;
-  background-color: salmon;
-  color: black;
-}
-#Checkout .Overview .Details * {
-  background-color: salmon;
-  color: black;
-}
-#Checkout .Overview .Details input, #Checkout .Overview .Details button, #Checkout .Overview .Details select, #Checkout .Overview .Details option {
-  background-color: white;
+.Overview .Details form, .Overview .Details button {
+  margin-top: 10px;
 }
 
 * {

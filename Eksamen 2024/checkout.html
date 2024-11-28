@@ -36,14 +36,16 @@
                 <section class="Banner">
                     <h2>Checkout</h2>
                 </section>
-                <section id="Checkout">
                     <article class="Overview">
-                        <a href="produkt.html"><img src="images/grillstad_salami.jpg" alt="Grillstad salami" width="200" height="350"></a>
+                        <section class="Title">
+                            <h2>Your cart</h2>
+                        </section>
                         <section class="Details">
+                            <img src="images/gilde_salami.jpg" alt="gilde salami" width="160" height="300">
                             <h3>Salami</h3>
                             <p>1.5$</p>
                             <form>
-                                <select name="Size">
+                                <select>
                                     <option value="Snack-sized">Snack-sized</option>
                                     <option value="Small">Small</option>
                                     <option value="Medium">Medium</option>
@@ -52,64 +54,97 @@
                                 </select>
                             </form>
                             <form>
-                                <h4>Quantity:</h4>
-                                <button>-</button>
+                                <label>Quantity:</label>
+                                <button disabled>-</button>
                                 <input maxlength="3" value="1">
-                                <button>+</button>
+                                <button disabled>+</button>
+                                <!--Does nothing for now because i dont know how to make it work-->
+                            </form>
+                        </section>
+                        <section class="Details">
+                            <img src="images/grillstad_salami.jpg" alt="Grillstad salami" width="200" height="350">
+                            <h3>Salami</h3>
+                            <p>1.5$</p>
+                            <form>
+                                <select>
+                                    <option value="Snack-sized">Snack-sized</option>
+                                    <option value="Small">Small</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Large">Large</option>
+                                    <option value="Pizza-sized">Pizza-sized</option>
+                                </select>
+                            </form>
+                            <form>
+                                <label>Quantity:</label>
+                                <button disabled>-</button>
+                                <input value="1">
+                                <button disabled>+</button>
                                 <!--Does nothing for now because i dont know how to make it work-->
                             </form>
                         </section>
                     </article>
                     <article class="Overview">
-                        <a href="produkt.html"><img src="images/grillstad_salami.jpg" alt="Grillstad salami" width="200" height="350"></a>
-                        <h3>Salami</h3>
-                        <p>1.5$</p>
+                        <section class="Details">
+                            <section class="Title">
+                                <h2>Contact information</h2>
+                            </section>
+                            <form>
+                                <label>First Name</label>
+                                <input type="text" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
+                            </form>
+                            <form>
+                                <label>Last Name</label>
+                                <input type="text" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
+                            </form>
+                            <form>
+                                <label>Address</label>
+                                <input type="text" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
+                            </form>
+                            <form>
+                                <label>Postal Code</label>
+                                <input type="text" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
+                            </form>
+                            <form>
+                                <label>City</label>
+                                <input type="text" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
+                            </form>
+                            <form>
+                                <label>E-mail</label>
+                                <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                            </form>
+                            <form>
+                                <label>Phone number</label>
+                                <input type="tel" pattern="[0-9]{8,12}" required>
+                            </form>
+                            <button>
+                                <label>Save</label>
+                            </button>
+                        </section>
+                    </article>
+                    <article class="Overview">
+                        <section class="Title">
+                            <h2>Levering</h2>
+                        </section>
                         <form>
-                            <select name="Size">
-                                <option value="Snack-sized">Snack-sized</option>
-                                <option value="Small">Small</option>
-                                <option value="Medium">Medium</option>
-                                <option value="Large">Large</option>
-                                <option value="Pizza-sized">Pizza-sized</option>
-                            </select>
+                            <label>Express hjemlevering</label>
+                            <input type="radio" required>
+                            <b>3-4 virkedager</b>
                         </form>
                         <form>
-                            <h4>Quantity:</h4>
-                            <button>-</button>
-                            <input maxlength="3" value="1">
-                            <button>+</button>
-                            <!--Does nothing for now because i dont know how to make it work-->
+                            <label>Express pakke til utleveringssted</label>
+                            <input type="radio" required>
+                            <b>1-3 virkedager</b>
+                        </form>
+                        <form>
+                            <label>Standard hjemlevering</label>
+                            <input type="radio" required>
+                            <b>5-8 virkedager</b>
                         </form>
                     </article>
-                </section>
-                <section class="Banner">
-                    <h2>Our most popular products</h2>
-                    <h3>The meat of our lineup</h3>
-                </section>
-                <section>
-                    <article class="Personal">
-                        <h3>Salami</h3>
-                        <p>1.5$</p>
-                    </article>
-                </section>
-                <section class="Banner">
-                    <h2>Our most popular products</h2>
-                    <h3>The meat of our lineup</h3>
-                </section>
-                <section>
-                    <article class="Delivery">
-                        <h3>Salami</h3>
-                        <p>1.5$</p>
-                    </article>
-                </section>
-                <section class="Banner">
-                    <h2>Our most popular products</h2>
-                    <h3>The meat of our lineup</h3>
-                </section>
-                <section>
-                    <article class="Payment">
-                        <h3>Salami</h3>
-                        <p>1.5$</p>
+                    <article class="Overview">
+                        <section class="Title">
+                            <h3>Betaling</h3>
+                        </section>
                     </article>
                 </section>
             </main>
@@ -118,16 +153,16 @@
                     <h2>Golde</h2>
                     <h4>The greatest salami for the lowest prices</h4>
                 </section>
-                <section id="Footer_Contact">
+                <section>
                     <h2>Contact</h2>
                     <ul>
-                        <li><b>Addresse</b>: B R A Veien 4, 1757 Halden</li>
-                        <li><b>Telefon:</b> 69 60 80 00</li>
-                        <li><b>E-Post:</b> halden@hiof.no</li>
-                        <li><b>Åpningstider:</b> Stenger 15:00</li>
+                        <li><i class="fa-solid fa-location-dot"></i><b> Addresse</b>: B R A Veien 4, 1757 Halden</li>
+                        <li><i class="fa-solid fa-phone"></i><b> Telefon:</b> 69 60 80 00</li>
+                        <li><i class="fa-solid fa-envelope"></i><b> E-Post:</b> halden@hiof.no</li>
+                        <li><i class="fa-solid fa-clock"></i><b> Åpningstider:</b> Stenger 15:00</li>
                     </ul>
                 </section>
-                <section id="Footer_Shortcuts">
+                <section>
                     <h2>Shortcuts</h2>
                     <ul>
                         <li><a href="#Global-Header">Top</a></li>
@@ -136,7 +171,7 @@
                         <li><a href="#Footer">Contact</a></li>
                     </ul>
                 </section>
-                <section id="Footer_Navigation">
+                <section id="Social_Media">
                     <h2>Social Media</h2>
                     <ul>
                         <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
