@@ -175,6 +175,7 @@ footer ul a {
   justify-content: space-evenly;
   align-items: normal;
   background-color: white;
+  margin: 1rem;
 }
 
 .product-card {
@@ -201,9 +202,61 @@ footer ul a {
   color: white;
 }
 
-.Review-Card {
+.Product_Review {
+  margin: 5px;
+  max-width: 150px;
+}
+
+#Big_Banner {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 2px solid black;
+  background-color: #8a1611;
+  color: white;
+  border-radius: 10%;
+  flex-grow: 1;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  padding: 1rem;
+  margin: 5px;
+  position: relative;
+  text-align: center;
+  /*Couldnt figure out how to place text on top of an image so i copied this from W3Schools*/
+  /*Couldnt figure out how to dynamically rezise an image in HTML so i copied this from stackoverflow*/
+}
+#Big_Banner #Overlay_Arrow_Left {
+  font-size: large;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+}
+#Big_Banner #Overlay_Arrow_Right {
+  font-size: large;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translate(-50%, -50%);
+}
+#Big_Banner img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  border-radius: 10%;
+}
+#Big_Banner * {
+  align-items: center;
+  justify-self: center;
+  color: black;
+}
+
+.Review-Card {
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -219,8 +272,6 @@ footer ul a {
 }
 .Review-Card * {
   background-color: #8a1611;
-  align-items: center;
-  justify-self: center;
   color: white;
 }
 .Review-Card .Review {
@@ -229,6 +280,7 @@ footer ul a {
   background-color: salmon;
   color: white;
   margin: 5px;
+  max-width: 150px;
 }
 .Review-Card h3, .Review-Card p, .Review-Card i {
   background-color: salmon;
@@ -300,6 +352,7 @@ footer ul a {
   align-items: center;
   justify-self: center;
   color: white;
+  margin: 0.5rem;
 }
 .Overview .Details {
   display: flex;

@@ -6,6 +6,7 @@
 .Product-Container{
     @include flexbox(row, wrap, space-evenly, normal);
     background-color: f.$background;
+    margin: 1rem;
 }
 
 .product-card{
@@ -26,8 +27,57 @@
     }
 }
 
-.Review-Card{
+.Product_Review{
+    margin: 5px;
+    max-width: 150px;
+}   
+
+#Big_Banner{
     @include flexbox(row, wrap, center, center);
+    @include colours(f.$background2, f.$text_colour2);
+    border-radius: 10%;
+
+    flex-grow: 1;
+    min-width: fit-content;
+    padding: 1rem;
+    margin: 5px;
+
+    position: relative;
+    text-align: center;
+    /*Couldnt figure out how to place text on top of an image so i copied this from W3Schools*/
+    #Overlay_Arrow_Left{
+        font-size: large;
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translate(-50%, -50%);
+    }
+
+    #Overlay_Arrow_Right{
+        font-size: large;
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        transform: translate(-50%, -50%);
+    }
+
+    img{
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        border-radius: 10%;
+    }
+    /*Couldnt figure out how to dynamically rezise an image in HTML so i copied this from stackoverflow*/
+
+    *{
+        align-items: center;
+        justify-self: center;
+        color: f.$text_colour1;
+    }
+}
+
+.Review-Card{
+    @include flexbox(column, wrap, center, center);
     @include colours(f.$background2, f.$text_colour2);
 
     flex-grow: 1;
@@ -37,14 +87,13 @@
     
     *{
         background-color: f.$background2;
-        align-items: center;
-        justify-self: center;
         color: f.$text_colour2;
     }
 
     .Review{
         @include colours(f.$background3, f.$text_colour2);
         margin: 5px;
+        max-width: 150px;
     }   
     h3, p, i{
         background-color: f.$background3;
@@ -84,5 +133,4 @@
         justify-self: center;
         color: f.$text_colour1;
     }
-
 }
