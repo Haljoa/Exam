@@ -254,6 +254,10 @@ footer ul a {
   color: black;
 }
 
+#Reviews {
+  overflow: scroll;
+}
+
 .Review-Card {
   display: flex;
   flex-direction: column;

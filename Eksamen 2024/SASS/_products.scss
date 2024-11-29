@@ -76,6 +76,10 @@
     }
 }
 
+#Reviews{
+    overflow: scroll;
+}
+
 .Review-Card{
     @include flexbox(column, wrap, center, center);
     @include colours(f.$background2, f.$text_colour2);
