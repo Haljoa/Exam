@@ -25,16 +25,32 @@
     }
 
     .Details{
-        @include flexbox(column, wrap, space-around, center);
+        @include flexbox(row, wrap, space-around, center);
+        text-align: center;
 
         *{
             margin: 0px;
         }
 
-        #Contact{
-            @include flexbox(column, wrap, space-around, center);
-        }
+            
+        .Purchase_Details{
+            @include colours(f.$background3, f.$text_colour1);
 
+            *{
+                background-color: f.$background3;
+            }
+                
+            input, button, select, option, button label, input{
+                background-color: f.$background;
+                color: f.$text_colour1;
+                margin: 5px;
+            }
+
+            form, button{
+                margin-top: 10px;
+            }
+        }
+        
         input, button, select, option, button label, input{
             background-color: f.$background;
             color: f.$text_colour1;
@@ -45,4 +61,27 @@
             margin-top: 10px;
         }
     }
+}
+
+#Card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#Payment{
+    @include flexbox(row, wrap, center, center);
+    h3{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+#Finalizing{
+    @include flexbox(column, wrap, center, center);
+}
+
+#Contact{
+    @include flexbox(column, wrap, space-around, center);
 }

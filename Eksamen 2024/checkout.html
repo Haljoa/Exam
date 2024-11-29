@@ -42,7 +42,8 @@
                     </section>
                     <section class="Details">
                         <a href="produkt.html"><img src="images/gilde_salami.jpg" alt="gilde salami" width="160" height="300"></a>
-                        <h3>Salami</h3>
+                        <section class="Purchase_Details">
+                            <h3>Salami</h3>
                         <p>1.5$</p>
                         <form>
                             <select>
@@ -57,24 +58,27 @@
                             <label>Quantity:</label>
                             <input type="number" min="0">
                         </form>
+                        </section>
                     </section>
                     <section class="Details">
                         <a href="produkt.html"><img src="images/grillstad_salami.jpg" alt="Grillstad salami" width="200" height="350"></a>
-                        <h3>Salami</h3>
-                        <p>1.5$</p>
-                        <form>
-                            <select>
-                                <option value="Snack-sized">Snack-sized</option>
-                                <option value="Small">Small</option>
-                                <option value="Medium">Medium</option>
-                                <option value="Large">Large</option>
-                                <option value="Pizza-sized">Pizza-sized</option>
-                            </select>
-                        </form>
-                        <form>
-                            <label>Quantity:</label>
-                            <input type="number" min="0">
-                        </form>
+                        <section class="Purchase_Details">
+                            <h3>Salami</h3>
+                            <p>1.5$</p>
+                            <form>
+                                <select>
+                                    <option value="Snack-sized">Snack-sized</option>
+                                    <option value="Small">Small</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Large">Large</option>
+                                    <option value="Pizza-sized">Pizza-sized</option>
+                                </select>
+                            </form>
+                            <form>
+                                <label>Quantity:</label>
+                                <input type="number" min="0">
+                            </form>
+                        </section>
                     </section>
                 </article>
                 <section class="Banner">
@@ -111,36 +115,44 @@
                         <input type="radio" name="delivery" required>
                         <label>Express home delivery</label>
                         <b>3-4 working days</b>
+                        <p>It will be delivered to your home as soon as possible -50000000000$</p>
                         <br>
                         <input type="radio" name="delivery" required>
                         <label>Express delivery to pick-up location</label>
                         <b>1-3 working days</b>
+                        <p>It will be delivered to a location near you, where you can pick it up at your earliest convenience -15$</p>
                         <br>
                         <input type="radio" name="delivery" required>
                         <label>Standard home delivery</label>
                         <b>5-8 working days</b>
+                        <p>It will be delivered to your home at a standard pace -0$</p>
                     </form>
                     <section class="Title">
                         <h2>Payment</h2>
                     </section>
                     <section class="Details">
-                        <form>
-                            <h3>Pay with card</h3>
-                            <label>Card number</label>
-                            <input type="text" name="cardnumber">
+                        <form id="Payment">
+                            <h3>Pay with card<i class="fa-solid fa-credit-card"></i></h3>
+                            <section id="Card">
+                                <label>Card number</label>
+                                <input type="text" name="cardnumber">
+                            </section>
                             <label>Expiration date</label>
                             <input type="text" name="exp">
                             <label>CVV/CSC</label>
                             <input type="text" name="CVV">
                         </form>
                     </section>
-                    <section class="Details">
+                    <section class="Details" id="Finalizing">
+                        <h3>To pay:</h3>
+                        <h4>50000000001.5$</h4>
                         <p>Du bekrefter herved at opplysningene og dokumentene du har
                             oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg
                             retten til å heve eller avslutte avtaleforholdet dersom det foreligger
-                            uriktige eller ufullstendige opplysninger <input type="submit" name="submit" value="Yes">
+                            uriktige eller ufullstendige opplysninger <input type="checkbox" name="submit" value="Yes">
                         </p>
                         <input type="submit" name="submit" value="submit">
+                        <p>Do you want newsletters from us?<input type="checkbox" name="submit" value="Yes"></p>
                     </section>
                 </article>
             </main>
